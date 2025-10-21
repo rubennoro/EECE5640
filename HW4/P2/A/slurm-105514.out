@@ -1,0 +1,22 @@
+p2a.cpp: In function ‘void getHistogram(const std::vector<int>&, std::vector<int>&)’:
+p2a.cpp:28:29: error: unable to deduce ‘auto&&’ from ‘std::data’
+   28 |         for(auto val : std::data){
+      |                             ^~~~
+p2a.cpp:28:29: note:   couldn’t deduce template parameter ‘auto’
+p2a.cpp:30:26: error: expected ‘;’ before ‘i’
+   30 |                 hist[bin]i++;
+      |                          ^
+      |                          ;
+--------------------------------------------------------------------------
+mpirun was unable to find the specified executable file, and therefore
+did not launch the job.  This error was first reported for process
+rank 0; it may have occurred for other processes as well.
+
+NOTE: A common cause for this error is misspelling a mpirun command
+      line parameter option (remember that mpirun interprets the first
+      unrecognized command line token as the executable).
+
+Node:       c0441
+Executable: p2a
+--------------------------------------------------------------------------
+16 total processes failed to start

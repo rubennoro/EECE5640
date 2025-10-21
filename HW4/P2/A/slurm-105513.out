@@ -1,0 +1,30 @@
+p2a.cpp: In function ‘void getHistogram(const std::vector<int>&, std::vector<int>&)’:
+p2a.cpp:28:29: error: unable to deduce ‘auto&&’ from ‘std::data’
+   28 |         for(auto val : std::data){
+      |                             ^~~~
+p2a.cpp:28:29: note:   couldn’t deduce template parameter ‘auto’
+p2a.cpp:29:28: error: ‘value’ was not declared in this scope
+   29 |                 int bin = (value - 1) / (MAX_RAND / BINS);
+      |                            ^~~~~
+p2a.cpp:30:17: error: ‘histogram’ was not declared in this scope; did you mean ‘getHistogram’?
+   30 |                 histogram[bin]++;
+      |                 ^~~~~~~~~
+      |                 getHistogram
+p2a.cpp: In function ‘int main(int, char**)’:
+p2a.cpp:39:9: error: ‘MPI_comm_rank’ was not declared in this scope; did you mean ‘MPI_Comm_rank’?
+   39 |         MPI_comm_rank(MPI_COMM_WORLD, &rank);
+      |         ^~~~~~~~~~~~~
+      |         MPI_Comm_rank
+--------------------------------------------------------------------------
+mpirun was unable to find the specified executable file, and therefore
+did not launch the job.  This error was first reported for process
+rank 0; it may have occurred for other processes as well.
+
+NOTE: A common cause for this error is misspelling a mpirun command
+      line parameter option (remember that mpirun interprets the first
+      unrecognized command line token as the executable).
+
+Node:       c0441
+Executable: p2a
+--------------------------------------------------------------------------
+16 total processes failed to start

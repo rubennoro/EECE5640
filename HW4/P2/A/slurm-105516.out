@@ -1,0 +1,27 @@
+[c0441:2038098:0:2038098] Caught signal 8 (Floating point exception: integer divide by zero)
+==== backtrace (tid:2038098) ====
+ 0  /shared/EL9/explorer/OpenMPI/4.1.6/lib/libucs.so.0(ucs_handle_error+0x294) [0x15185d5c8f64]
+ 1  /shared/EL9/explorer/OpenMPI/4.1.6/lib/libucs.so.0(+0x3011f) [0x15185d5c911f]
+ 2  /shared/EL9/explorer/OpenMPI/4.1.6/lib/libucs.so.0(+0x3052a) [0x15185d5c952a]
+ 3  p2a() [0x40144e]
+ 4  /lib64/libc.so.6(+0x3feb0) [0x15185ec3feb0]
+ 5  /lib64/libc.so.6(__libc_start_main+0x80) [0x15185ec3ff60]
+ 6  p2a() [0x4011b5]
+=================================
+[c0441:2038098] *** Process received signal ***
+[c0441:2038098] Signal: Floating point exception (8)
+[c0441:2038098] Signal code:  (-6)
+[c0441:2038098] Failing at address: 0x1690b001f1952
+[c0441:2038098] [ 0] /lib64/libc.so.6(+0x54db0)[0x15185ec54db0]
+[c0441:2038098] [ 1] p2a[0x40144e]
+[c0441:2038098] [ 2] /lib64/libc.so.6(+0x3feb0)[0x15185ec3feb0]
+[c0441:2038098] [ 3] /lib64/libc.so.6(__libc_start_main+0x80)[0x15185ec3ff60]
+[c0441:2038098] [ 4] p2a[0x4011b5]
+[c0441:2038098] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 0 on node c0441 exited on signal 8 (Floating point exception).
+--------------------------------------------------------------------------
